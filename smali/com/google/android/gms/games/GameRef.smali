@@ -1,0 +1,527 @@
+.class public final Lcom/google/android/gms/games/GameRef;
+.super Lq1/d;
+.source "com.google.android.gms:play-services-games@@20.0.1"
+
+# interfaces
+.implements Lcom/google/android/gms/games/Game;
+
+
+# virtual methods
+.method public final E()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "package_name"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final F1()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "real_time_support"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final G0()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "muted"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->q2(Ljava/lang/String;II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final synthetic G1()Ljava/lang/Object;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/games/GameEntity;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/games/GameEntity;-><init>(Lcom/google/android/gms/games/Game;)V
+
+    return-object v0
+.end method
+
+.method public final L1()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "gamepad_support"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final P0()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "primary_category"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final U1()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "theme_color"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final a()Landroid/net/Uri;
+    .locals 1
+
+    const-string v0, "game_icon_image_uri"
+
+    invoke-virtual {p0, v0}, Lq1/d;->U(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()Landroid/net/Uri;
+    .locals 1
+
+    const-string v0, "game_hi_res_image_uri"
+
+    invoke-virtual {p0, v0}, Lq1/d;->U(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c0()I
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "achievement_total_count"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d0()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "secondary_category"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/android/gms/games/GameEntity;->u2(Lcom/google/android/gms/games/Game;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final g1()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "turn_based_support"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getApplicationId()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "external_game_id"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getDescription()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "game_description"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getDisplayName()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "display_name"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getFeaturedImageUrl()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "featured_image_url"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getHiResImageUrl()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "game_hi_res_image_url"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getIconImageUrl()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "game_icon_image_url"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-static {p0}, Lcom/google/android/gms/games/GameEntity;->t2(Lcom/google/android/gms/games/Game;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j2()Landroid/net/Uri;
+    .locals 1
+
+    const-string v0, "featured_image_uri"
+
+    invoke-virtual {p0, v0}, Lq1/d;->U(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final k2()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "snapshots_enabled"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final l1()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "developer_name"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->t2(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final o1()I
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "leaderboard_count"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "identity_sharing_confirmed"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->q2(Ljava/lang/String;II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lcom/google/android/gms/games/GameEntity;->v2(Lcom/google/android/gms/games/Game;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final v()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "installed"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->r2(Ljava/lang/String;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/games/GameEntity;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/games/GameEntity;-><init>(Lcom/google/android/gms/games/Game;)V
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/games/GameEntity;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return-void
+.end method
+
+.method public final zzc()Z
+    .locals 4
+
+    iget-object v0, p0, Lq1/d;->a:Lcom/google/android/gms/common/data/DataHolder;
+
+    iget v1, p0, Lq1/d;->b:I
+
+    iget v2, p0, Lq1/d;->h:I
+
+    const-string v3, "play_enabled_game"
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->q2(Ljava/lang/String;II)Z
+
+    move-result v0
+
+    return v0
+.end method

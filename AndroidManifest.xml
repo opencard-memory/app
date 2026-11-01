@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:installLocation="auto"
+    android:compileSdkVersion="31"
+    android:compileSdkVersionCodename="12"
+    package="com.bsl.v41"
+    platformBuildVersionCode="31"
+    platformBuildVersionName="12"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.distinct"
+        android:required="false" />
+    <!-- 앱이 네트워크 소켓을 만들고 맞춤 네트워크 프로토콜을 사용할 수 있도록 허용합니다. 브라우저 및 기타 앱이 데이터를 인터넷에 전송하는 수단을 제공하므로, 이 권한이 데이터를 인터넷에 전송하는 데 필요하지 않습니다. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- 앱이 어떤 네트워크가 존재하며 연결되었는지 등의 네트워크 연결에 대한 정보를 볼 수 있도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 앱이 휴대전화의 절전 모드 전환을 막도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- 앱이 Wi-Fi 액세스 포인트에 연결하거나 연결을 끊고, Wi-Fi 네트워크의 기기 설정을 변경할 수 있도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 앱이 Wi-Fi를 사용하도록 설정했는지 여부나 연결된 Wi-Fi 기기의 이름 등의 Wi-Fi 네트워킹에 대한 정보를 볼 수 있도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 이 앱 내에서 Google Play를 통해 항목을 구입할 수 있습니다. -->
+    <uses-permission
+        android:name="com.android.vending.BILLING" />
+    <!-- 앱이 진동을 제어할 수 있도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <supports-screens
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+    <meta-data
+        android:name="android.max_aspect"
+        android:value="2.4" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <!-- 앱이 설치 리퍼러 정보를 가져오도록 허용합니다. -->
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- 앱이 클라우드로부터 C2DM을 수신할 수 있도록 합니다. 이 서비스는 데이터 사용량을 높일 수 있으며 악성 프로그램의 경우 과다한 데이터 사용을 유발할 수 있습니다. -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 앱이 공유 저장공간의 콘텐츠에 쓰도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 앱이 공유 저장공간의 콘텐츠를 읽도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 앱을 사용하는 동안 앱에서 카메라를 사용하여 사진을 촬영하고 동영상을 녹화할 수 있습니다. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.CAMERA" />
+    <queries>
+        <package
+            android:name="com.supercell.brawlstars" />
+        <package
+            android:name="com.supercell.boombeach" />
+        <package
+            android:name="com.supercell.clashofclans" />
+        <package
+            android:name="com.supercell.clashroyale" />
+        <package
+            android:name="com.supercell.hayday" />
+        <package
+            android:name="com.supercell.clashquest" />
+    </queries>
+    <!-- 앱에서 포그라운드 서비스를 사용하도록 허용합니다. -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+    <uses-permission
+        android:name="freemme.permission.msa" />
+    <application
+        android:label="BSL-V41"
+        android:icon="@drawable/ic_launcher"
+        android:name="com.supercell.titan.TitanMultidexApplication"
+        android:debuggable="true"
+        android:backupAgent="com.supercell.titan.PreferencesBackupAgent"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="@string/backup_api_key" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:label="BSL-V41"
+            android:name="com.supercell.brawlstars.GameApp"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustNothing|stateUnchanged"
+            android:resizeableActivity="false"
+            android:maxAspectRatio="2.4">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="brawlstars" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true">
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="link.brawlstars.com" />
+                <data
+                    android:scheme="https"
+                    android:host="link.brawlstars.com" />
+                <data
+                    android:scheme="http"
+                    android:host="link-staging.brawlstars.com" />
+                <data
+                    android:scheme="https"
+                    android:host="link-staging.brawlstars.com" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="kakaogame241121" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="kakaod509a010c29a8768bcc216071a43fa9b" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="kakaod509a010c29a8768bcc216071a43fa9b"
+                    android:host="kakaolink" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="kakaod509a010c29a8768bcc216071a43fa9b"
+                    android:host="kakaostory" />
+            </intent-filter>
+            <meta-data
+                android:name="com.kakao.sdk.AppKey"
+                android:value="d509a010c29a8768bcc216071a43fa9b" />
+            <meta-data
+                android:name="android.app.nova_lib"
+                android:value="nova_cpp" />
+            <intent-filter>
+                <action
+                    android:name="com.google.intent.action.TEST_LOOP" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="application/javascript" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.supercell.titan.TimeAlarm" />
+        <service
+            android:name="org.OpenUDID.OpenUDID_service">
+            <intent-filter>
+                <action
+                    android:name="org.OpenUDID.GETUDID" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="d509a010c29a8768bcc216071a43fa9b" />
+        <activity
+            android:name="jp.line.android.sdk.activity.WebLoginActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name="jp.line.android.sdk.activity.LineAuthCompleteActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="line.brawlstars" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="jp.line.sdk.ChannelId"
+            android:value="1622218855" />
+        <meta-data
+            android:name="jp.line.sdk.AuthScheme"
+            android:value="com.supercell.brawlstars" />
+        <meta-data
+            android:name="jp.line.sdk.Phase"
+            android:value="REAL" />
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://880f0207de8e4e04b25cd91291658659@o1083338.ingest.sentry.io/6126854" />
+        <meta-data
+            android:name="io.sentry.session-tracking.enable"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.environment"
+            android:value="production" />
+        <meta-data
+            android:name="io.sentry.anr.timeout-interval-mills"
+            android:value="5000" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <service
+            android:name="com.supercell.titan.PushMessageService">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="firebase_analytics_collection_deactivated"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="io.sentry.anr.enable"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.ndk.scope-sync.enable"
+            android:value="true" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.facebook.FacebookActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:theme="@style/zxing_CaptureTheme"
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.supercell.brawlstars" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.kakaogame.KGAuthActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:label="@string/com_kakao_login_button"
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name="io.sentry.android.core.SentryInitProvider"
+            android:exported="false"
+            android:authorities="com.bsl.v41.SentryInitProvider" />
+        <provider
+            android:name="io.sentry.android.core.SentryPerformanceProvider"
+            android:exported="false"
+            android:authorities="com.bsl.v41.SentryPerformanceProvider"
+            android:initOrder="200" />
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"
+            android:visibleToInstantApps="true" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.bsl.v41.firebaseinitprovider"
+            android:initOrder="100" />
+        <provider
+            android:name="com.helpshift.support.providers.HelpshiftFileProvider"
+            android:exported="false"
+            android:authorities="com.bsl.v41.helpshift.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/hs__provider_paths" />
+        </provider>
+        <activity
+            android:theme="@style/Helpshift.Theme.Activity"
+            android:name="com.helpshift.support.activities.ParentActivity"
+            android:launchMode="singleTop"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@style/Helpshift.Theme.Dialog"
+            android:name="com.helpshift.support.HSReview"
+            android:configChanges="orientation|screenSize" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.bsl.v41.FacebookInitProvider" />
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/SupercellIdTheme"
+            android:name="com.supercell.id.ui.MainActivity" />
+        <receiver
+            android:name="com.supercell.id.SharedDataBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.supercell.id.GetSharedData" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.supercell.id.SharedDataReceiverBroadcastReceiver"
+            android:exported="false" />
+        <activity
+            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:process=":playcore_missing_splits_activity"
+            android:stateNotNeeded="true"
+            android:launchMode="singleInstance" />
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:stateNotNeeded="true" />
+        <service
+            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+            android:enabled="false"
+            android:exported="true" />
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="3.0.3" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:theme="@style/LineSdk_AuthenticationActivity"
+            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationCallbackActivity"
+            android:exported="true"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="lineauth" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.bsl.v41.lifecycle-process" />
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base,googleplay_asset_pack" />
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store" />
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_STANDALONE_APK" />
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0" />
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="1" />
+    </application>
+</manifest>

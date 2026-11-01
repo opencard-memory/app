@@ -1,0 +1,67 @@
+.class public interface abstract Lcom/google/android/gms/games/multiplayer/Participant;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-games@@20.0.1"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+.implements Lq1/e;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable;",
+        "Lq1/e<",
+        "Lcom/google/android/gms/games/multiplayer/Participant;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract A0()Z
+.end method
+
+.method public abstract R()Lcom/google/android/gms/games/multiplayer/ParticipantResult;
+.end method
+
+.method public abstract V()Ljava/lang/String;
+.end method
+
+.method public abstract a()Landroid/net/Uri;
+.end method
+
+.method public abstract c()Landroid/net/Uri;
+.end method
+
+.method public abstract getDisplayName()Ljava/lang/String;
+.end method
+
+.method public abstract getHiResImageUrl()Ljava/lang/String;
+    .annotation build Lcom/google/android/gms/common/annotation/KeepName;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract getIconImageUrl()Ljava/lang/String;
+    .annotation build Lcom/google/android/gms/common/annotation/KeepName;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract getStatus()I
+.end method
+
+.method public abstract n()Lcom/google/android/gms/games/Player;
+.end method
+
+.method public abstract n2()I
+.end method
+
+.method public abstract y0()Ljava/lang/String;
+.end method

@@ -1,0 +1,67 @@
+.class public final Lpc/c;
+.super Ljava/lang/Object;
+.source "ProfileV1Fragment.kt"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:Lpc/d;
+
+
+# direct methods
+.method public constructor <init>(Lpc/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lpc/c;->a:Lpc/d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
+
+    iget-object v0, p0, Lpc/c;->a:Lpc/d;
+
+    const-string v1, "it"
+
+    invoke-static {p1, v1}, Lnd/a;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of v1, p1, Ljava/lang/Float;
+
+    if-nez v1, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    check-cast p1, Ljava/lang/Float;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    :goto_0
+    invoke-virtual {v0, p1}, Lpc/d;->a(F)V
+
+    iget-object p1, p0, Lpc/c;->a:Lpc/d;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method

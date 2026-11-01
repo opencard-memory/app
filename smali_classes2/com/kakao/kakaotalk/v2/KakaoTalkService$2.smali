@@ -1,0 +1,82 @@
+.class Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;
+.super Lcom/kakao/network/tasks/KakaoResultTask;
+.source "KakaoTalkService.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kakao/kakaotalk/v2/KakaoTalkService;->requestProfile(Lcom/kakao/kakaotalk/callback/TalkResponseCallback;Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kakao/network/tasks/KakaoResultTask<",
+        "Lcom/kakao/kakaotalk/response/KakaoTalkProfile;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/kakao/kakaotalk/v2/KakaoTalkService;
+
+.field public final synthetic val$secureResource:Z
+
+
+# direct methods
+.method public constructor <init>(Lcom/kakao/kakaotalk/v2/KakaoTalkService;Lcom/kakao/network/callback/ResponseCallback;Z)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;->this$0:Lcom/kakao/kakaotalk/v2/KakaoTalkService;
+
+    iput-boolean p3, p0, Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;->val$secureResource:Z
+
+    invoke-direct {p0, p2}, Lcom/kakao/network/tasks/KakaoResultTask;-><init>(Lcom/kakao/network/callback/ResponseCallback;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public call()Lcom/kakao/kakaotalk/response/KakaoTalkProfile;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;->this$0:Lcom/kakao/kakaotalk/v2/KakaoTalkService;
+
+    invoke-static {v0}, Lcom/kakao/kakaotalk/v2/KakaoTalkService;->access$000(Lcom/kakao/kakaotalk/v2/KakaoTalkService;)Lcom/kakao/kakaotalk/api/KakaoTalkApi;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;->val$secureResource:Z
+
+    invoke-virtual {v0, v1}, Lcom/kakao/kakaotalk/api/KakaoTalkApi;->requestProfile(Z)Lcom/kakao/kakaotalk/response/KakaoTalkProfile;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/kakao/kakaotalk/v2/KakaoTalkService$2;->call()Lcom/kakao/kakaotalk/response/KakaoTalkProfile;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,0 +1,55 @@
+.class public Lea/l;
+.super Ljava/lang/Object;
+.source "SmartIntentRendererImpl.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:Lea/a;
+
+
+# direct methods
+.method public constructor <init>(Lea/a;)V
+    .locals 0
+
+    iput-object p1, p0, Lea/l;->a:Lea/a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, Lea/l;->a:Lea/a;
+
+    iget-object v0, p1, Lea/a;->z:Lo8/b;
+
+    instance-of v0, v0, Lo8/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lea/a;->b:Lea/m;
+
+    check-cast p1, Lba/k;
+
+    iget-object p1, p1, Lba/k;->r:Lr8/i;
+
+    invoke-virtual {p1}, Lr8/i;->q()Z
+
+    :cond_0
+    iget-object p1, p0, Lea/l;->a:Lea/a;
+
+    iget-object p1, p1, Lea/a;->r:Landroid/widget/EditText;
+
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method

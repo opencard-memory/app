@@ -1,0 +1,18 @@
+.class public abstract Lx0/r;
+.super Ljava/lang/Object;
+.source "TransitionPropagation.java"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Landroid/view/ViewGroup;Landroidx/transition/Transition;Lx0/s;Lx0/s;)J
+.end method

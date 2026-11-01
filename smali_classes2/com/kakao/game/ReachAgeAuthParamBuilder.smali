@@ -1,0 +1,25 @@
+.class public Lcom/kakao/game/ReachAgeAuthParamBuilder;
+.super Lcom/kakao/auth/AgeAuthParamBuilder;
+.source "ReachAgeAuthParamBuilder.java"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/kakao/auth/AgeAuthParamBuilder;-><init>()V
+
+    sget-object v0, Lcom/kakao/auth/AuthService$AgeAuthLevel;->LEVEL_2:Lcom/kakao/auth/AuthService$AgeAuthLevel;
+
+    invoke-virtual {p0, v0}, Lcom/kakao/auth/AgeAuthParamBuilder;->setAuthLevel(Lcom/kakao/auth/AuthService$AgeAuthLevel;)Lcom/kakao/auth/AgeAuthParamBuilder;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/kakao/auth/AgeAuthParamBuilder;->setSkipTerm(Z)Lcom/kakao/auth/AgeAuthParamBuilder;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/kakao/auth/AgeAuthParamBuilder;->setIsWesternAge(Z)Lcom/kakao/auth/AgeAuthParamBuilder;
+
+    return-void
+.end method

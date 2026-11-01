@@ -1,0 +1,92 @@
+.class public final Lad/r$c;
+.super Lqd/i;
+.source "RecyclerViewUtil.kt"
+
+# interfaces
+.implements Lpd/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lad/r;->l(Ljava/util/List;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lqd/i;",
+        "Lpd/a<",
+        "Lad/r1;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Ljava/util/List;
+
+.field public final synthetic b:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+    .locals 0
+
+    iput-object p1, p0, Lad/r$c;->a:Ljava/util/List;
+
+    iput-object p2, p0, Lad/r$c;->b:Ljava/util/List;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lqd/i;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public invoke()Ljava/lang/Object;
+    .locals 6
+
+    new-instance v0, Lad/r1;
+
+    iget-object v1, p0, Lad/r$c;->a:Ljava/util/List;
+
+    iget-object v2, p0, Lad/r$c;->b:Ljava/util/List;
+
+    new-instance v3, Lad/q1;
+
+    if-eqz v1, :cond_0
+
+    move-object v4, v1
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Lgd/m;->a:Lgd/m;
+
+    :goto_0
+    if-eqz v2, :cond_1
+
+    move-object v5, v2
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v5, Lgd/m;->a:Lgd/m;
+
+    :goto_1
+    invoke-direct {v3, v4, v5}, Lad/q1;-><init>(Ljava/util/List;Ljava/util/List;)V
+
+    invoke-static {v3}, Landroidx/recyclerview/widget/l;->a(Landroidx/recyclerview/widget/l$b;)Landroidx/recyclerview/widget/l$c;
+
+    move-result-object v3
+
+    invoke-direct {v0, v1, v2, v3}, Lad/r1;-><init>(Ljava/util/List;Ljava/util/List;Landroidx/recyclerview/widget/l$c;)V
+
+    return-object v0
+.end method

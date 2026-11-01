@@ -1,0 +1,294 @@
+.class public Lcom/google/android/gms/common/api/internal/LifecycleCallback;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-basement@@17.5.0"
+
+
+# instance fields
+.field public final a:Lp1/f;
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lp1/f;)V
+    .locals 0
+    .param p1    # Lp1/f;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->a:Lp1/f;
+
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;)Lp1/f;
+    .locals 5
+    .param p0    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    const-string v0, "Activity must not be null"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/a;->i(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    instance-of v0, p0, Landroidx/fragment/app/FragmentActivity;
+
+    if-eqz v0, :cond_3
+
+    check-cast p0, Landroidx/fragment/app/FragmentActivity;
+
+    const-string v0, "SupportLifecycleFragmentImpl"
+
+    sget-object v1, Lp1/k0;->i:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p0}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp1/k0;
+
+    if-eqz v1, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/FragmentManager;->I(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+
+    move-result-object v1
+
+    check-cast v1, Lp1/k0;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->isRemoving()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_1
+    new-instance v1, Lp1/k0;
+
+    invoke-direct {v1}, Lp1/k0;-><init>()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v2
+
+    new-instance v3, Landroidx/fragment/app/b;
+
+    invoke-direct {v3, v2}, Landroidx/fragment/app/b;-><init>(Landroidx/fragment/app/FragmentManager;)V
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v2, v1, v0, v4}, Landroidx/fragment/app/b;->h(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
+
+    invoke-virtual {v3}, Landroidx/fragment/app/b;->l()I
+
+    :cond_2
+    sget-object v0, Lp1/k0;->i:Ljava/util/WeakHashMap;
+
+    new-instance v2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p0, v2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Fragment with tag SupportLifecycleFragmentImpl is not a SupportLifecycleFragmentImpl"
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_3
+    const-string v0, "LifecycleFragmentImpl"
+
+    sget-object v1, Lp1/j0;->i:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, p0}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp1/j0;
+
+    if-eqz v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    :try_start_1
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v1
+
+    check-cast v1, Lp1/j0;
+    :try_end_1
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Landroid/app/Fragment;->isRemoving()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    :cond_5
+    new-instance v1, Lp1/j0;
+
+    invoke-direct {v1}, Lp1/j0;-><init>()V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+
+    :cond_6
+    sget-object v0, Lp1/j0;->i:Ljava/util/WeakHashMap;
+
+    new-instance v2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, p0, v2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_0
+    return-object v1
+
+    :catch_1
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Fragment with tag LifecycleFragmentImpl is not a LifecycleFragmentImpl"
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method private static getChimeraLifecycleFragmentImpl(Lp1/e;)Lp1/f;
+    .locals 1
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Method not available in SDK."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public a()Landroid/app/Activity;
+    .locals 1
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->a:Lp1/f;
+
+    invoke-interface {v0}, Lp1/f;->n()Landroid/app/Activity;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c(IILandroid/content/Intent;)V
+    .locals 0
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public d(Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public f(Landroid/os/Bundle;)V
+    .locals 0
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public g()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public h()V
+    .locals 0
+
+    return-void
+.end method

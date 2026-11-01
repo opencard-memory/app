@@ -1,0 +1,111 @@
+.class public abstract Lk3/x1;
+.super Lk3/x;
+
+
+# instance fields
+.field public final b:Lcom/google/android/gms/measurement/internal/m;
+
+.field public c:Z
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/measurement/internal/m;)V
+    .locals 2
+
+    iget-object v0, p1, Lcom/google/android/gms/measurement/internal/m;->i:Lcom/google/android/gms/measurement/internal/g;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, v0, v1}, Lk3/x;-><init>(Lcom/google/android/gms/measurement/internal/g;I)V
+
+    iput-object p1, p0, Lk3/x1;->b:Lcom/google/android/gms/measurement/internal/m;
+
+    iget v0, p1, Lcom/google/android/gms/measurement/internal/m;->o:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p1, Lcom/google/android/gms/measurement/internal/m;->o:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n()V
+    .locals 2
+
+    iget-boolean v0, p0, Lk3/x1;->c:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Not initialized"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public abstract o()Z
+.end method
+
+.method public p()Lcom/google/android/gms/measurement/internal/n;
+    .locals 1
+
+    iget-object v0, p0, Lk3/x1;->b:Lcom/google/android/gms/measurement/internal/m;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/m;->x()Lcom/google/android/gms/measurement/internal/n;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public q()Lcom/google/android/gms/measurement/internal/s;
+    .locals 1
+
+    iget-object v0, p0, Lk3/x1;->b:Lcom/google/android/gms/measurement/internal/m;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/m;->z()Lcom/google/android/gms/measurement/internal/s;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final r()V
+    .locals 3
+
+    iget-boolean v0, p0, Lk3/x1;->c:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lk3/x1;->o()Z
+
+    iget-object v0, p0, Lk3/x1;->b:Lcom/google/android/gms/measurement/internal/m;
+
+    iget v1, v0, Lcom/google/android/gms/measurement/internal/m;->p:I
+
+    const/4 v2, 0x1
+
+    add-int/2addr v1, v2
+
+    iput v1, v0, Lcom/google/android/gms/measurement/internal/m;->p:I
+
+    iput-boolean v2, p0, Lk3/x1;->c:Z
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Can\'t initialize twice"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method

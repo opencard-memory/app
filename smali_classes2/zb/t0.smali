@@ -1,0 +1,111 @@
+.class public final Lzb/t0;
+.super Ljava/lang/Object;
+.source "MainActivity.kt"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:Landroid/animation/ValueAnimator;
+
+.field public final synthetic b:I
+
+.field public final synthetic h:Lzb/w0;
+
+
+# direct methods
+.method public constructor <init>(Landroid/animation/ValueAnimator;ILzb/w0;)V
+    .locals 0
+
+    iput-object p1, p0, Lzb/t0;->a:Landroid/animation/ValueAnimator;
+
+    iput p2, p0, Lzb/t0;->b:I
+
+    iput-object p3, p0, Lzb/t0;->h:Lzb/w0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
+
+    iget-object p1, p0, Lzb/t0;->h:Lzb/w0;
+
+    iget-object p1, p1, Lzb/w0;->a:Lcom/supercell/id/ui/MainActivity;
+
+    sget-object v0, Lcom/supercell/id/ui/MainActivity;->t:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Lcom/supercell/id/ui/MainActivity;->y()Ljava/lang/Integer;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lzb/t0;->h:Lzb/w0;
+
+    iget-object v0, v0, Lzb/w0;->a:Lcom/supercell/id/ui/MainActivity;
+
+    sget v1, Lcom/supercell/id/R$id;->head:I
+
+    invoke-virtual {v0, v1}, Lcom/supercell/id/ui/MainActivity;->i(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    const-string v2, "head"
+
+    invoke-static {v0, v2}, Lnd/a;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget v2, p0, Lzb/t0;->b:I
+
+    iget-object v3, p0, Lzb/t0;->a:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result v3
+
+    int-to-float v4, v2
+
+    sub-int/2addr p1, v2
+
+    int-to-float p1, p1
+
+    mul-float p1, p1, v3
+
+    add-float/2addr p1, v4
+
+    invoke-static {p1}, Lsd/a;->k(F)I
+
+    move-result p1
+
+    iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget-object p1, p0, Lzb/t0;->h:Lzb/w0;
+
+    iget-object p1, p1, Lzb/w0;->a:Lcom/supercell/id/ui/MainActivity;
+
+    invoke-virtual {p1, v1}, Lcom/supercell/id/ui/MainActivity;->i(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->requestLayout()V
+
+    :cond_0
+    return-void
+.end method

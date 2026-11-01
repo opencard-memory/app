@@ -1,0 +1,71 @@
+.class public final Lcom/google/android/gms/drive/query/internal/zzz;
+.super Lcom/google/android/gms/drive/query/internal/zza;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcom/google/android/gms/drive/query/internal/zzz;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lh2/a;
+
+    invoke-direct {v0}, Lh2/a;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/drive/query/internal/zzz;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/gms/drive/query/internal/zza;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final S0(Ltc/c;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<F:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ltc/c;",
+            ")TF;"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "ownedByMe()"
+
+    return-object p1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Ls1/b;->r(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Ls1/b;->u(Landroid/os/Parcel;I)V
+
+    return-void
+.end method

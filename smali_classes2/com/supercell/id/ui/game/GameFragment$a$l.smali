@@ -1,0 +1,100 @@
+.class public final Lcom/supercell/id/ui/game/GameFragment$a$l;
+.super Ljava/lang/Object;
+.source "GameFragment.kt"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/supercell/id/ui/game/GameFragment$a;->i(Lad/p1$a;ILad/o1;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/supercell/id/ui/game/GameFragment$a;
+
+
+# direct methods
+.method public constructor <init>(Lcom/supercell/id/ui/game/GameFragment$a;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/supercell/id/ui/game/GameFragment$a$l;->a:Lcom/supercell/id/ui/game/GameFragment$a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
+
+    sget-object p1, Lcom/supercell/id/SupercellId;->INSTANCE:Lcom/supercell/id/SupercellId;
+
+    invoke-virtual {p1}, Lcom/supercell/id/SupercellId;->getSharedServices$supercellId_release()Lad/t;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lad/t;->l:Lf3/b;
+
+    const-string p1, "Game "
+
+    invoke-static {p1}, Landroid/support/v4/media/e;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/supercell/id/ui/game/GameFragment$a$l;->a:Lcom/supercell/id/ui/game/GameFragment$a;
+
+    iget-object v1, v1, Lcom/supercell/id/ui/game/GameFragment$a;->k:Lyb/g;
+
+    invoke-virtual {v1}, Lyb/g;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x18
+
+    const-string v2, "click"
+
+    const-string v3, "Activate"
+
+    invoke-static/range {v0 .. v6}, Lf3/b;->p(Lf3/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZI)V
+
+    iget-object p1, p0, Lcom/supercell/id/ui/game/GameFragment$a$l;->a:Lcom/supercell/id/ui/game/GameFragment$a;
+
+    iget-object p1, p1, Lad/r;->f:Landroidx/fragment/app/Fragment;
+
+    invoke-static {p1}, Lc0/a;->v(Landroidx/fragment/app/Fragment;)Lcom/supercell/id/ui/MainActivity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/supercell/id/ui/game/GameFragment$a$l;->a:Lcom/supercell/id/ui/game/GameFragment$a;
+
+    iget-object v0, v0, Lcom/supercell/id/ui/game/GameFragment$a;->k:Lyb/g;
+
+    iget-object v0, v0, Lyb/g;->g:Ljava/lang/String;
+
+    invoke-static {p1, v0}, Lc0/a;->I(Landroid/app/Activity;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
